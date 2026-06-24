@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:black;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-size:4rem;
+color:#ff4da6;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #ff4da6;}
+to{ text-shadow:0 0 25px #ff4da6;}
+}
+
+.subtitle{
+margin-top:15px;
+font-size:1.2rem;
+max-width:700px;
+}
+
+.heart{
+position:fixed;
+color:#ff4da6;
+font-size:20px;
+animation: float 8s linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+100%{
+transform:translateY(-100vh);
+opacity:1;
+}
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+color:#ff4da6;
+margin-bottom:30px;
+font-size:2rem;
+}
+
+.memories{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.memory-card{
+background:#111;
+padding:20px;
+border-radius:15px;
+width:250px;
+border:1px solid #ff4da6;
+}
+
+.letter{
+max-width:800px;
+margin:auto;
+background:#111;
+padding:30px;
+border-radius:20px;
+line-height:1.8;
+border:1px solid #ff4da6;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+font-size:1.2rem;
+border:none;
+border-radius:50px;
+background:#ff4da6;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#message{
+margin-top:20px;
+font-size:1.5rem;
+color:#ff99cc;
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>I'm Sorry ❤️</h1>
+<p class="subtitle">
+You mean the world to me. This page is a small way of expressing how deeply sorry I am.
+</p>
+</div>
+
+<section class="section">
+<h2>✨ Our Beautiful Memories ✨</h2>
+<div class="memories">
+
+<div class="memory-card">
+<h3>First Conversation</h3>
+<p>The day everything started and my heart found its favorite person.</p>
+</div>
+
+<div class="memory-card">
+<h3>Our Laughs</h3>
+<p>The moments where we couldn't stop smiling together.</p>
+</div>
+
+<div class="memory-card">
+<h3>Every Late Night Talk</h3>
+<p>The memories I cherish more than words can explain.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>💌 My Apology Letter</h2>
+
+<div class="letter">
+My Love,
+
+I know I made mistakes and hurt you, and for that I am truly sorry.
+
+You deserve understanding, patience, respect, and love. Looking back, I wish I had handled things differently. If I could go back, I would choose my words more carefully and protect your heart better.
+
+Every moment with you is precious to me. The memories we've created together are some of the happiest parts of my life.
+
+I'm not asking you to forget what happened. I'm asking for a chance to learn, grow, and become better for us.
+
+No matter what, thank you for being such an important part of my life.
+
+I love you. ❤️
+
+Forever Yours,
+Zaid
+</div>
+
+<button onclick="forgiveMe()">Forgive Me? ❤️</button>
+<p id="message">Thank you for giving my heart another chance ❤️</p>
+
+</section>
+
+<script>
+function forgiveMe(){
+document.getElementById("message").style.display="block";
+}
+
+for(let i=0;i<40;i++){
+let heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+heart.style.fontSize=(Math.random()*20+15)+"px";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
